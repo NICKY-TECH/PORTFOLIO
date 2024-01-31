@@ -1,9 +1,9 @@
 import "../styles/destination.css"
 
 function Navigation (){
-    return <header>
-
-    </header>
+    return <nav>
+        
+    </nav>
 }
 
 export default Navigation

@@ -1,11 +1,7 @@
-import './App.css'
-
+import BodyWrapper from "./pages/BodyWrapper";
+import "./styles/destination.css";
 function App() {
-  return(
-    <div className=''>
-
-    </div>
-  )
+  return <BodyWrapper />;
 }
 
-export default App
+export default App;

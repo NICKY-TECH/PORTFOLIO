@@ -508,11 +508,32 @@ video {
 .relative{
   position: relative;
 }
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
+.col-span-8{
+  grid-column: span 8 / span 8;
+}
+.col-span-9{
+  grid-column: span 9 / span 9;
+}
+.row-span-1{
+  grid-row: span 1 / span 1;
+}
 .block{
   display: block;
 }
+.flex{
+  display: flex;
+}
 .table{
   display: table;
+}
+.grid{
+  display: grid;
 }
 .contents{
   display: contents;
@@ -520,11 +541,23 @@ video {
 .hidden{
   display: none;
 }
+.h-\[95\%\]{
+  height: 95%;
+}
 .h-full{
   height: 100%;
 }
+.h-screen{
+  height: 100vh;
+}
+.w-\[95\%\]{
+  width: 95%;
+}
 .w-full{
   width: 100%;
+}
+.w-screen{
+  width: 100vw;
 }
 .border-collapse{
   border-collapse: collapse;
@@ -535,8 +568,34 @@ video {
 .resize{
   resize: both;
 }
+.grid-cols-12{
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.grid-rows-1{
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.items-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.gap-4{
+  gap: 1rem;
+}
+.rounded-lg{
+  border-radius: 0.5rem;
+}
 .border{
   border-width: 1px;
+}
+.bg-background-content{
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
+}
+.bg-neutral-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -551,9 +610,47 @@ video {
   box-sizing: border-box;
 }
 
-body{
+body,
+html{
   height: 100%;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
+.body-wrapper{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+main{
+  display: grid;
+  height: 95%;
+  width: 95%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
+aside{
+  grid-column: span 3 / span 3;
+  grid-row: span 1 / span 1;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
+}
+
+.body{
+  grid-column: span 9 / span 9;
+  grid-row: span 1 / span 1;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
 }

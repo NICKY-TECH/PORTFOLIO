@@ -511,6 +511,9 @@ video {
 .col-span-1{
   grid-column: span 1 / span 1;
 }
+.col-span-12{
+  grid-column: span 12 / span 12;
+}
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -534,6 +537,9 @@ video {
 }
 .row-span-12{
   grid-row: span 12 / span 12;
+}
+.ml-4{
+  margin-left: 1rem;
 }
 .mt-10{
   margin-top: 2.5rem;
@@ -562,11 +568,14 @@ video {
 .hidden{
   display: none;
 }
+.h-6{
+  height: 1.5rem;
+}
+.h-\[1\.6rem\]{
+  height: 1.6rem;
+}
 .h-\[40px\]{
   height: 40px;
-}
-.h-\[95\%\]{
-  height: 95%;
 }
 .h-full{
   height: 100%;
@@ -574,8 +583,42 @@ video {
 .h-screen{
   height: 100vh;
 }
+.max-h-max{
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.max-h-min{
+  max-height: -moz-min-content;
+  max-height: min-content;
+}
+.max-h-screen{
+  max-height: 100vh;
+}
+.min-h-max{
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+.min-h-min{
+  min-height: -moz-min-content;
+  min-height: min-content;
+}
+.min-h-screen{
+  min-height: 100vh;
+}
+.w-6{
+  width: 1.5rem;
+}
+.w-\[1\.6rem\]{
+  width: 1.6rem;
+}
 .w-\[35px\]{
   width: 35px;
+}
+.w-\[5\%\]{
+  width: 5%;
+}
+.w-\[90\%\]{
+  width: 90%;
 }
 .w-\[95\%\]{
   width: 95%;
@@ -586,6 +629,12 @@ video {
 .w-screen{
   width: 100vw;
 }
+.flex-grow{
+  flex-grow: 1;
+}
+.grow{
+  flex-grow: 1;
+}
 .border-collapse{
   border-collapse: collapse;
 }
@@ -595,11 +644,17 @@ video {
 .resize{
   resize: both;
 }
+.list-disc{
+  list-style-type: disc;
+}
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .grid-rows-1{
   grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.grid-rows-2{
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .flex-col{
   flex-direction: column;
@@ -610,11 +665,19 @@ video {
 .justify-center{
   justify-content: center;
 }
+.gap-2{
+  gap: 0.5rem;
+}
 .gap-4{
   gap: 1rem;
 }
 .gap-6{
   gap: 1.5rem;
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-y-10 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -655,13 +718,83 @@ video {
 .border{
   border-width: 1px;
 }
+.border-\[4px\]{
+  border-width: 4px;
+}
+.bg-\[\#fafafa\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+.bg-background{
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
 .bg-background-content{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
 }
 .bg-neutral-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+.p-2{
+  padding: 0.5rem;
+}
+.p-3{
+  padding: 0.75rem;
+}
+.p-5{
+  padding: 1.25rem;
+}
+.p-6{
+  padding: 1.5rem;
+}
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.font-Rubik{
+  font-family: Rubik;
+}
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-\[\#d3d3d3\]{
+  --tw-text-opacity: 1;
+  color: rgb(211 211 211 / var(--tw-text-opacity));
+}
+.text-\[\#fafafa\]{
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -681,7 +814,8 @@ html{
   height: 100%;
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(232 241 255 / var(--tw-bg-opacity));
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+  font-family: Rubik;
 }
 
 .body-wrapper{
@@ -690,15 +824,30 @@ html{
   width: 100vw;
   align-items: center;
   justify-content: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media (max-width: 767px){
+
+  .body-wrapper{
+    height: 100%;
+  }
 }
 
 main{
   display: grid;
-  height: 95%;
   width: 95%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+}
+
+@media (min-width: 766px){
+
+  main{
+    height: 97%;
+  }
 }
 
 aside{
@@ -706,7 +855,9 @@ aside{
   grid-row: span 1 / span 1;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .body{
@@ -714,7 +865,7 @@ aside{
   grid-row: span 1 / span 1;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
 }
 
 nav{
@@ -722,12 +873,24 @@ nav{
   grid-row: span 1 / span 1;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(30 30 31 / var(--tw-bg-opacity));
+}
+
+li a{
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
 }
 
 li a img{
   height: 40px;
   width: 35px;
+  border-radius: 0.5rem;
+}
+
+li a img:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
 }
 
 ul{
@@ -740,6 +903,151 @@ ul{
 
 ul > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
-  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+header{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+  font-weight: 700;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.about{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-content{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(211 211 211 / var(--tw-text-opacity));
+}
+
+hr{
+  width: 5%;
+  border-radius: 9999px;
+  border-width: 4px;
+}
+
+.what-i-do{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.what-i-do-title{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+  font-weight: 700;
+}
+
+.frontend, .backend{
+  width: 90%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.frontend div, .backend div{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.what-i-do .frontend, .what-i-do .backend{
+  height: 100%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+}
+
+.what-i-do div p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.frontend{
+  grid-column: span 12 / span 12;
+  grid-row: span 1 / span 1;
+}
+
+.backend{
+  grid-column: span 12 / span 12;
+  grid-row: span 1 / span 1;
+  padding-bottom: 0.5rem;
+}
+
+.resume-item{
+  display: flex;
+  align-items: center;
+}
+
+.resume-item > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.resume-item p{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+  font-weight: 700;
+}
+
+.sub-list{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+}
+
+.title-list{
+  font-weight: 500;
+}
+
+.hover\:bg-button-hover:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
+@media (max-width: 767px){
+
+  .max-\[767px\]\:h-full{
+    height: 100%;
+  }
+}
+
+@media (min-width: 766px){
+
+  .min-\[766px\]\:h-\[97\%\]{
+    height: 97%;
+  }
 }

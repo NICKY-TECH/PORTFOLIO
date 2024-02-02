@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import 'tippy.js/dist/tippy.css';
 
-function NavList({ direct, label,icon }) {
+function NavList({ direct, label,icon,index }) {
   return (
-    <li>
-  <Tippy content={label} placement='right'>
+    <li key={index}>
+  <Tippy content={label} placement='right' arrow={false}>
   <a href={direct}>
     <img src={icon}/>
     </a>

@@ -12,6 +12,7 @@ function Navigation (){
             label={link.link} 
             icon={link.icon}
             key={index}
+            index
             />
         </>
     })

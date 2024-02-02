@@ -1,12 +1,11 @@
-import { About,SideBar,Navigation } from "../../index";
+import { About,SideBar,Navigation,Resume } from "../../index";
 import { Outlet } from "react-router-dom";
 
 function Body() {
   return <main>
   <Navigation/>
   <SideBar/>
-<About/>
-
+<Resume/>
   </main>;
 }
 

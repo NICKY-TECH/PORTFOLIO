@@ -12,33 +12,111 @@
 
 body,
 html {
-  @apply w-full h-full bg-background;
+  @apply w-full font-Rubik h-full bg-background;
 }
 
 .body-wrapper {
-  @apply w-screen h-screen flex justify-center items-center ;
+  @apply w-screen max-[767px]:h-full h-screen py-3 flex justify-center items-center;
 }
 
 main {
-  @apply grid grid-cols-12 grid-rows-1 gap-4 h-[95%] w-[95%];
+  @apply grid grid-cols-12 grid-rows-1 gap-4 min-[766px]:h-[97%] w-[95%];
 }
 
-aside{
-  @apply col-span-3 row-span-1 rounded-lg bg-background-content
+aside {
+  @apply col-span-3 row-span-1 rounded-lg bg-background-content py-3;
 }
 
-.body{
+.body {
   @apply col-span-8 row-span-1 rounded-lg bg-background-content;
 }
 
-nav{
-@apply col-span-1 row-span-1 bg-background-content rounded-lg
+nav {
+  @apply col-span-1 row-span-1 bg-background-content rounded-lg ;
 }
 
-li a img{
-  @apply w-[35px] h-[40px]
+li a {
+  @apply w-full  rounded-lg p-5;
 }
 
-ul{
-  @apply w-full flex flex-col mt-10 items-center space-y-20
+li a img {
+  @apply w-[35px] h-[40px] hover:bg-button-hover rounded-lg;
+}
+
+ul {
+  @apply w-full flex flex-col mt-10 items-center space-y-8;
+}
+
+header {
+  @apply text-4xl text-[#fafafa];
+  font-weight: 700;
+}
+
+.main-content{
+  @apply flex flex-col space-y-4;
+}
+
+.about{
+  @apply mt-4 ml-4 flex flex-col gap-3;
+}
+
+.about-content{
+  @apply text-lg text-[#d3d3d3]
+}
+
+hr{
+  @apply border-[4px] rounded-full w-[5%];
+}
+
+.what-i-do{
+  @apply flex flex-col gap-4 mx-1;
+  flex-grow: 1;
+}
+
+.what-i-do-title{
+  @apply text-3xl text-[#fafafa];
+  font-weight: 700;
+
+}
+
+.frontend, .backend{
+  @apply  w-[90%] px-2 ;
+}
+
+.frontend div, .backend div{
+  @apply text-lg;
+}
+
+.what-i-do .frontend, .what-i-do .backend{
+@apply bg-[#fafafa] h-full rounded-lg p-2;
+}
+
+.what-i-do div p{
+  @apply text-base;
+  font-weight: 600;
+}
+
+.frontend{
+  @apply col-span-12 row-span-1;
+}
+
+.backend{
+  @apply col-span-12 row-span-1 pb-2;
+}
+
+.resume-item{
+  @apply flex space-x-2 items-center;
+}
+
+.resume-item p{
+  @apply text-[#fafafa] text-3xl;
+  font-weight: 700;
+}
+
+.sub-list{
+  @apply text-[#fafafa] flex flex-col mt-4 gap-2 mb-2;
+}
+
+.title-list{
+  font-weight: 500;
 }
